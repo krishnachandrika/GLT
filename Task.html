@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script>
+        var place =0;
+        function changeColor() {
+            var colorList = ["red","green","blue", "#ccc"];
+            document.getElementById('mytable').style.backgroundColor = colorList[place]; 
+            place++
+            if (place ===colorList.length) place=0; 
+        }
+  $(document).ready(function(){
+  $("#hide").click(function(){
+    $("table").hide();
+  });
+  $("#show").click(function(){
+    $("table").show();
+  });
+});
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body >
+<p>This is a 1st Row.</p>
+<hr/>
+<table id ="mytable" border = "1">
+         <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Domain</th>            
+            <th>Salary</th>
+         </tr>
+         <tr>
+            <td>Krishna</td>
+            <td>GLT</td>
+            <td>UI</td>
+            <td>15000</td>
+         </tr>
+         
+         <tr>
+            <td>Venu</td>
+            <td>GLT</td>
+            <td>Java</td>
+            <td>15000</td>
+         </tr>
+           <tr>
+            <td>Rekha</td>
+            <td>GLT</td>
+            <td>Aws</td>
+            <td>25000</td>
+         </tr>
+           <tr>
+            <td>Gopal</td>
+            <td>GLT</td>
+            <td>UI</td>
+            <td>20000</td>
+         </tr>
+      </table>
+      <hr/>
+<button onclick="changeColor()">click me</button>
+<hr/>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</body>
+
+</html>
